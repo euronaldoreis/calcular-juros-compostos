@@ -54,8 +54,8 @@ export default function App() {
   };
 
   return (
-    <div>
-      <h1>React Juros compostos</h1>
+    <div className="container">
+      <h1 className="center">React Juros compostos</h1>
       <Form
         data={{ initalValue, monthlyInterest, monthlyPeriod }}
         onChangeData={handleChangeData}
