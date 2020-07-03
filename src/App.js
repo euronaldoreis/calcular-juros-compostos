@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Form from './components/Form';
 import Installments2 from './components/Installments2';
 
+import css from './components/header.module.css';
+
 export default function App() {
   const [initalValue, setInitialValue] = useState(1000);
   const [monthlyInterest, setMonthlyInterest] = useState(1);
@@ -54,13 +56,23 @@ export default function App() {
   };
 
   return (
-    <div className="container">
-      <h1 className="center">React Juros compostos</h1>
-      <Form
-        data={{ initalValue, monthlyInterest, monthlyPeriod }}
-        onChangeData={handleChangeData}
-      />
-      <Installments2 data={Installments} />
-    </div>
+    <>
+      <div className={css.sidebar}>
+        <h3>Calcular Juros Compostos</h3>
+      </div>
+      <div className="container">
+        <Form
+          data={{ initalValue, monthlyInterest, monthlyPeriod }}
+          onChangeData={handleChangeData}
+        />
+        <Installments2 data={Installments} />
+      </div>
+      <div className={css.footer}>
+        Criado por{' '}
+        <a href="https://github.com/euronaldoreis" target="_blank">
+          Ronaldo Reis
+        </a>
+      </div>
+    </>
   );
 }
