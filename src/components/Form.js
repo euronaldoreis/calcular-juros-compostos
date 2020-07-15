@@ -14,7 +14,7 @@ export default function Form({ data, onChangeData }) {
   };
   return (
     <div className="center row">
-      <div className="col input-field s6 m4 l3">
+      <div className="col input-field s12 m6 l4">
         <input
           id="inputInitialValue"
           type="number"
@@ -28,7 +28,7 @@ export default function Form({ data, onChangeData }) {
         </label>
       </div>
 
-      <div className="col input-field s6 m4 l3">
+      <div className="col input-field s12 m6 l4">
         <input
           id="inputMonthlyInterest"
           type="number"
@@ -43,7 +43,7 @@ export default function Form({ data, onChangeData }) {
         </label>
       </div>
 
-      <div className="col input-field s6 m4 l3">
+      <div className="col input-field s12 m6 l4">
         <input
           id="inputMonthlyPeriod"
           type="number"

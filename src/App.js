@@ -57,22 +57,34 @@ export default function App() {
 
   return (
     <>
-      <div className={css.sidebar}>
-        <h3>Calcular Juros Compostos</h3>
-      </div>
-      <div className="container">
-        <Form
-          data={{ initalValue, monthlyInterest, monthlyPeriod }}
-          onChangeData={handleChangeData}
-        />
-        <Installments2 data={Installments} />
-      </div>
-      <div className={css.footer}>
-        Criado por{' '}
-        <a href="https://github.com/euronaldoreis" target="_blank">
-          Ronaldo Reis
-        </a>
-      </div>
+      <header className="page-header">
+        <div className={css.sidebar}>
+          <h3>Calcular Juros Compostos</h3>
+        </div>
+      </header>
+      <main className={css.page_main}>
+        <div className="container">
+          <div className="section">
+            <Form
+              data={{ initalValue, monthlyInterest, monthlyPeriod }}
+              onChangeData={handleChangeData}
+            />
+            <Installments2 data={Installments} />
+          </div>
+        </div>
+      </main>
+      <footer className={css.footer}>
+        <div className="container">
+          <div className="row">
+            <p>
+              Criado por{'  '}
+              <a href="https://github.com/euronaldoreis" target="_blank">
+                Ronaldo Reis
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
